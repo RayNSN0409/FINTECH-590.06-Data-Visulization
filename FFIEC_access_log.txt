@@ -1,0 +1,87 @@
+FINTECH 590 Lecture 5 — FFIEC Data Access Record
+
+Source:
+FFIEC Central Data Repository Public Web Service (CDR PWS)
+RetrievalService
+
+Authenticated retrieval:
+Completed successfully using a registered PWS account.
+
+Credential handling:
+No username, security token, password, authorization header, or session credential is stored in this file or in the PBIX.
+Credentials are retained only in a local .env file that is excluded from version control.
+
+Retrieval run ID / UTC timestamp:
+20260918T182251719148Z / 2026-09-18T18:22:51.719148Z
+
+Reporting form:
+FFIEC 031
+
+Common reporting quarter:
+2026-06-30
+
+Institutions requested:
+5
+
+Institutions matched:
+5 of 5
+
+Unique bank-quarter records:
+5
+
+Duplicate bank-quarter keys:
+0
+
+Institution-name mismatches:
+0
+
+RSSD verification:
+Call Report bank RSSD IDs and top-parent RSSD IDs were verified against FFIEC NIC identity records.
+
+Call Report bank RSSD IDs:
+480228  — BANK OF AMERICA, NATIONAL ASSOCIATION
+476810  — CITIBANK, N.A.
+2182786 — GOLDMAN SACHS BANK USA
+852218  — JPMORGAN CHASE BANK, NATIONAL ASSOCIATION
+451965  — WELLS FARGO BANK, NATIONAL ASSOCIATION
+
+Schedules used:
+RC
+RC-B
+RC-C Part I
+RC-E Part I
+RC-E Part II
+RC-N
+RC-R Part I
+
+Files retained:
+Raw XBRL filings
+Raw SDF filings
+Official filing PDFs
+Download manifest with SHA-256 hashes
+Field-level metric evidence with MDRM, Schedule, line, raw value, and source file
+
+Validation completed:
+All five expected legal entities were present for the common quarter.
+All metric denominators were positive.
+Tier 1 ratios reconciled to reported RC-R item 50.
+Regulatory leverage ratios reconciled to reported RC-R item 31.
+Assignment average assets reconciled to the retained cross-check.
+The final five-row dataset contained no duplicate bank-quarter keys.
+
+Data flow:
+Authenticated FFIEC CDR retrieval
+→ raw filing identity and period validation
+→ MDRM field extraction
+→ metric calculation and reconciliation
+→ data/processed/powerbi_metrics.csv
+→ Power BI Import model
+
+Evidence files:
+evidence/runs/20260918T182251719148Z/download_manifest.json
+data/processed/metric_evidence.csv
+data/processed/qa_summary.json
+verified_institutions.json
+
+Liquidity metric limitation:
+The 12-month measure is a selected-instrument remaining-maturity proxy. It is not a complete contractual or behavioral liquidity ladder and excludes non-maturity deposits, other borrowings, and long-dated instruments that may reprice within one year.

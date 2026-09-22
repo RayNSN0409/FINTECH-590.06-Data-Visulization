@@ -1,0 +1,3 @@
+Goldman Sachs Bank USA is the most exposed peer because its cumulative 12-month maturity-gap proxy is the lowest at 3.7% of total assets, ranked 1 of 5 under the selected-instrument proxy.
+Its Tier 1 capital ratio is 13.5% and its NPL ratio is 0.43%, so the immediate concern is liquidity coverage rather than a Tier 1 capital breach.
+Prioritize a funding and maturity-profile review while monitoring the leverage and loan-to-deposit supporting metrics.
